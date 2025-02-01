@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Carrito de compras</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Carrito de compras DPS</h1>
+		
+			<div class="container-icon">
+				<!--En el encabezado se mostrara los productos a comprar y el boton de pago para enviar al html de compra exitosa-->
+				<div class="container-cart-icon">
+					<img src="Imagenes/bolsacomp.png" alt="Carrito de compras" class="icon-cart">
+					<div class="count-products">
+						<span id="contador-productos">0</span>
+					</div>
+				</div>
+		
+				<div class="container-cart-products hidden-cart">
+					<div class="row-product hidden">
+						<div class="cart-product">
+							<div class="info-cart-product">
+								<span class="cantidad-producto-carrito">1</span>
+								<p class="titulo-producto-carrito"></p>
+								<span class="precio-producto-carrito">$</span>
+							</div>
+							<img src="Imagenes/cerrar.png" alt="Eliminar" class="icon-close">
+						</div>
+						
+					</div>
+		
+					<div class="cart-total hidden">
+						<h3>Total:</h3>
+						<span class="total-pagar">$</span>
+						<button class="btn-ir-a-compra" onclick="window.location.href='Exito.html'">
+							Finalizar Compra
+						</button>
+					</div>
+					<p class="cart-empty">Carro de compras vacio</p>
+				</div>
+			</div>			
+			</button>
+		</header>
+		
+		<!--Si se desea agregar mas articulos abajo esta el codigo solo para-->
+		<div class="container-items">
+			<div class="item">
+				<figure>
+					<img
+						src="Imagenes/Telefono celular.jpg"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Telefono celular</h2>
+					<p class="price">$300</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+		<!---->
+
+		<div class="container-items">
+			<div class="item">
+				<figure>
+					<img
+						src="Imagenes/audifonos.png"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Audifonos</h2>
+					<p class="price">$60</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+		<script src="JSCarrito.js"></script>
+	</body>
+</html>
+
+
+<!--Si se desea agregar mas articulos al carro inicio de contenedores de productos
+<div class="container-items">
+	<div class="item">
+		<figure>
+			<img
+				src="Imagenes/Articulo_a_Agregar.jpg"
+				alt="producto"
+			/>
+		</figure>
+		<div class="info-product">
+			<h2>Nombre_del_Articulo</h2>
+			<p class="price">$Precio_del_Articulo</p>
+			<button class="btn-add-cart">Añadir al carrito</button>
+		</div>
+	</div>
+-->
