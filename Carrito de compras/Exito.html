@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+    <link rel="stylesheet" href="factura.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <header>
+    <button class="btn-casa" onclick="window.location.href='index.html'">
+        <i class="fas fa-home"></i> <!-- Ícono de casa -->
+    </button>
+    <h1>Factura de Compra</h1>
+</header>
+
+			</h1>
+
+		
+    </header>
+    
+    <section class="factura-container">
+        <h2>Detalles de la compra</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="detalle-factura">
+                <!-- Aquí se agregarán dinámicamente los productos -->
+            </tbody>
+        </table>
+        <h3>Total a pagar: <span id="total-factura">$0</span></h3>
+        <button onclick="imprimirBoleta()">Imprimir Boleta</button>
+		
+    </section>
+
+    <script src="factura.js"></script>
+</body>
+</html>

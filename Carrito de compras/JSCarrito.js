@@ -61,6 +61,8 @@ const updateCart = () => {
 		});
 	}
 
-	valorTotal.innerText = `$${total}`;
+	valorTotal.innerText = `$${total.toFixed(2)}`;
 	countProducts.innerText = totalOfProducts;
+	localStorage.setItem("carrito", JSON.stringify(allProducts));
 };
+
