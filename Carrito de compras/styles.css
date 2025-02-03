@@ -39,8 +39,8 @@ header{
     position: relative;
 }
 .btn-ir-a-compra {
-    background-color: #ff6600; /* Color naranja */
-    color: white; /* Texto en blanco */
+    background-color: #ff6600; 
+    color: white; 
     font-size: 16px;
     font-weight: bold;
     padding: 10px 20px;
@@ -48,15 +48,15 @@ header{
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
-    margin-left: 20px; /* Separación del carrito */
+    margin-left: 20px; 
 }
 
 .btn-ir-a-compra:hover {
-    background-color: #cc5500; /* Color más oscuro al pasar el cursor */
+    background-color: #cc5500; 
 }
 
 .btn-ir-a-compra:active {
-    background-color: #aa4400; /* Color aún más oscuro al hacer clic */
+    background-color: #aa4400; 
 }
 
 
