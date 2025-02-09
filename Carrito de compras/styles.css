@@ -9,8 +9,7 @@
 
 body{
     margin: 0 auto;
-    max-width: 1200px;
-    font-family: 'Lato';
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #333;
 }
 
@@ -31,13 +30,24 @@ img{
 /* Header */
 header{
     display: flex;
+    position: relative;
+    width: 100%;
     justify-content: space-between;
-    padding: 30px 0 40px 0;
+    padding: 30px 50px 40px 50px;
+    background-color: #274C77;
+    color: white;
 }
 
 .container-icon{
     position: relative;
+    transition: transform 0.5s ease-in-out;
+
 }
+.container-icon:hover{
+    transform: scale(1.2);
+    cursor:pointer;
+}
+
 .btn-ir-a-compra {
     background-color: #ff6600; 
     color: white; 
