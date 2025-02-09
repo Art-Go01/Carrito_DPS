@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>ByteHub SV</title>
+	<link rel="stylesheet" href="assests/css/styles.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link href="assests/css/brands.css" rel="stylesheet" />
+	<link href="assests/css/solid.css" rel="stylesheet" />
+	<link href="assests/css/fontawesome.css" rel="stylesheet" />
+</head>
+
+<body>
+	<header>
+		<h1>ByteHub El Salvador</h1>
+		<div class="container-icon">
+			<!--En el encabezado se mostrara los productos a comprar y el boton de pago para enviar al html de compra exitosa-->
+			<div class="container-cart-icon">
+				<i id="carrito-icono" class="fa-solid fa-cart-shopping" style="font-size: 40px;"></i>
+				<div class="count-products">
+					<span id="contador-productos">0</span>
+				</div>
+			</div>
+
+			<div class="container-cart-products hidden-cart">
+				<div class="row-product hidden">
+					<div class="cart-product">
+						<div class="info-cart-product">
+							<span class="cantidad-producto-carrito">1</span>
+							<p class="titulo-producto-carrito"></p>
+							<span class="precio-producto-carrito">$</span>
+						</div>
+						<i id="icon-close" class="fa-solid fa-xmark"></i>
+					</div>
+
+				</div>
+
+				<div class="cart-total hidden">
+					<h3>Total:</h3>
+					<span class="total-pagar">$</span>
+					<button class="btn-ir-a-compra" onclick="window.location.href='html/Exito.html'">
+						Finalizar Compra
+					</button>
+				</div>
+				<p class="cart-empty">Carro de compras vacio</p>
+			</div>
+		</div>
+		</button>
+	</header>
+	<ul class="menu">
+		<li><a href="#">Inicio</a></li>
+		<li><a href="#">Catálogo</a></li>
+		<li><a href="#">Marcas</a></li>
+		<li><a href="#">Contacto</a></li>
+		<li><a href="#">Quienes Somos</a></li>
+
+	</ul>
+	<div class="banner">
+		<img src="" alt="">
+	</div>
+	<!--Si se desea agregar mas articulos abajo esta el codigo solo para-->
+	<div class="container-items">
+		<div class="item">
+			<figure>
+				<img src="assests/Imagenes/Telefono celular.jpg" alt="producto" />
+			</figure>
+			<div class="info-product">
+				<h2>Teléfono móvil</h2>
+				<p class="price">$300</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="assests/Imagenes/audifonos.png" alt="producto" />
+			</figure>
+			<div class="info-product">
+				<h2>Audífonos</h2>
+				<p class="price">$60</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+			</div>
+		</div>
+	</div>
+	
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="social-icons">
+						<a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+						<a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+						<a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+						<a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+					</div>
+					<p>&copy; 2024 Libreria La Nueva. Todos los derechos reservados.</p>
+					<p><a href="#">Política de Privacidad</a> | <a href="#">Términos de Servicio</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="js/JSCarrito.js"></script>
+</body>
+
+</html>
+
+
+<!--Si se desea agregar mas articulos al carro inicio de contenedores de productos
+<div class="container-items">
+	<div class="item">
+		<figure>
+			<img
+				src="Imagenes/Articulo_a_Agregar.jpg"
+				alt="producto"
+			/>
+		</figure>
+		<div class="info-product">
+			<h2>Nombre_del_Articulo</h2>
+			<p class="price">$Precio_del_Articulo</p>
+			<button class="btn-add-cart">Añadir al carrito</button>
+		</div>
+	</div>
+-->

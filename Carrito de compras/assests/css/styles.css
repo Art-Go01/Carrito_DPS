@@ -1,56 +1,91 @@
 /* Globales */
 *::after,
 *::before,
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0 auto;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #333;
 }
 
-.icon-cart{
+.icon-cart {
     width: 40px;
     height: 40px;
     stroke: #000;
 }
 
-.icon-cart:hover{
+.icon-cart:hover {
     cursor: pointer;
 }
 
-img{
+img {
     max-width: 100%;
 }
 
 /* Header */
-header{
+header {
     display: flex;
     position: relative;
     width: 100%;
     justify-content: space-between;
     padding: 30px 50px 40px 50px;
-    background-color: #274C77;
-    color: white;
+    color: #333;
 }
 
-.container-icon{
+.menu {
+    list-style: none;
+    padding: 10px;
+    background: #274C77;
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    transition: background 0.3s ease-in-out;
+}
+
+.menu a:hover {
+    background: #2980b9;
+    border-radius: 5px;
+}
+
+.container-icon {
     position: relative;
     transition: transform 0.5s ease-in-out;
 
 }
-.container-icon:hover{
-    transform: scale(1.2);
-    cursor:pointer;
+
+.container-icon:hover {
+    cursor: pointer;
+}
+
+#carrito-icono:hover {
+    transform: scale(1.4);
+    color: #2980b9;
+    cursor: pointer;
+}
+
+#carrito-icono{
+    transition: transform 0.5s ease-in-out;
 }
 
 .btn-ir-a-compra {
-    background-color: #ff6600; 
-    color: white; 
+    background-color: #ff6600;
+    color: white;
     font-size: 16px;
     font-weight: bold;
     padding: 10px 20px;
@@ -58,19 +93,19 @@ header{
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
-    margin-left: 20px; 
+    margin-left: 20px;
 }
 
 .btn-ir-a-compra:hover {
-    background-color: #cc5500; 
+    background-color: #cc5500;
 }
 
 .btn-ir-a-compra:active {
-    background-color: #aa4400; 
+    background-color: #aa4400;
 }
 
 
-.count-products{
+.count-products {
     position: absolute;
     top: 55%;
     right: 0;
@@ -86,11 +121,11 @@ header{
     border-radius: 50%;
 }
 
-#contador-productos{
+#contador-productos {
     font-size: 12px;
 }
 
-.container-cart-products{
+.container-cart-products {
     position: absolute;
     top: 50px;
     right: 0;
@@ -100,10 +135,10 @@ header{
     z-index: 1;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
     border-radius: 10px;
-    
+
 }
 
-.cart-product{
+.cart-product {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -113,38 +148,39 @@ header{
 
 }
 
-.info-cart-product{
+.info-cart-product {
     display: flex;
     justify-content: space-between;
     flex: 0.8;
 }
 
-.titulo-producto-carrito{
+.titulo-producto-carrito {
     font-size: 20px;
 }
 
-.precio-producto-carrito{
+.precio-producto-carrito {
     font-weight: 700;
     font-size: 20px;
     margin-left: 10px;
 }
 
-.cantidad-producto-carrito{
+.cantidad-producto-carrito {
     font-weight: 400;
     font-size: 20px;
 }
 
-.icon-close{
+.icon-close {
     width: 25px;
     height: 25px;
+
 }
 
-.icon-close:hover{
+.icon-close:hover {
     stroke: red;
     cursor: pointer;
 }
 
-.cart-total{
+.cart-total {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,17 +188,17 @@ header{
     gap: 20px;
 }
 
-.cart-total h3{
+.cart-total h3 {
     font-size: 20px;
     font-weight: 700;
 }
 
-.total-pagar{
+.total-pagar {
     font-size: 20px;
     font-weight: 900;
 }
 
-.hidden-cart{
+.hidden-cart {
     display: none;
 }
 
@@ -170,21 +206,21 @@ header{
 
 
 /* Main */
-.container-items{
+.container-items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-.item{
+.item {
     border-radius: 10px;
 }
 
-.item:hover{
+.item:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
 }
 
-.item img{
+.item img {
     width: 100%;
     height: 300px;
     object-fit: cover;
@@ -192,15 +228,15 @@ header{
     transition: all .5s;
 }
 
-.item figure{
+.item figure {
     overflow: hidden;
 }
 
-.item:hover img{
+.item:hover img {
     transform: scale(1.2);
 }
 
-.info-product{
+.info-product {
     padding: 15px 30px;
     line-height: 2;
     display: flex;
@@ -208,12 +244,12 @@ header{
     gap: 10px;
 }
 
-.price{
+.price {
     font-size: 18px;
     font-weight: 900;
 }
 
-.info-product button{
+.info-product button {
     border: none;
     background: none;
     background-color: #000;
@@ -222,12 +258,58 @@ header{
     cursor: pointer;
 }
 
-.cart-empty{
+.cart-empty {
     padding: 20px;
     text-align: center;
 }
 
 
-.hidden{
+.hidden {
     display: none;
+}
+
+#icon-close:hover {
+    color: red;
+
+}
+
+/*Estilos footer*/
+.footer {
+    position: relative;
+    width: 100%;
+    background-color: #274C77;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+    color: #00bcd4;
+}
+
+.footer .social-icons {
+    margin-bottom: 20px;
+}
+
+.footer .social-icons a {
+    font-size: 1.5rem;
+    margin: 0 15px;
+    color: #ffffff;
+}
+
+.footer .social-icons a:hover {
+    color: #00bcd4;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #aaaaaa;
 }

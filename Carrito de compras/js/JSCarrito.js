@@ -13,7 +13,7 @@ btnCart.addEventListener('click', () => containerCartProducts.classList.toggle('
 
 productsList.addEventListener('click', e => {
 	if (!e.target.classList.contains('btn-add-cart')) return;
-	
+
 	const product = e.target.parentElement;
 	const title = product.querySelector('h2').textContent;
 	const price = parseFloat(product.querySelector('.price').textContent.slice(1));
@@ -25,8 +25,8 @@ productsList.addEventListener('click', e => {
 });
 
 rowProduct.addEventListener('click', e => {
-	if (!e.target.classList.contains('icon-close')) return;
-	
+	if (e.target.id !== 'icon-close') return;
+
 	const title = e.target.previousElementSibling.querySelector('.titulo-producto-carrito').textContent;
 	allProducts = allProducts.filter(product => product.title !== title);
 	updateCart();
@@ -53,7 +53,8 @@ const updateCart = () => {
 						<p class="titulo-producto-carrito">${title}</p>
 						<span class="precio-producto-carrito">$${price}</span>
 					</div>
-					<img src="Imagenes/cerrar.png" alt="Eliminar" class="icon-close">
+					<i "class="fa-solid fa-xmark" alt="Eliminar"></i>
+
 				</div>
 			`;
 			total += price * quantity;
