@@ -7,6 +7,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     margin: 0 auto;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -220,13 +221,17 @@ header {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
 }
 
+
 .item img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+    width: 80%; /* Reduce el tamaño de la imagen */
+    height: 250px; /* Ajusta la altura */
+    object-fit: contain; /* Evita la deformación */
+    display: block;
+    margin: 0 auto; /* Centra la imagen dentro del contenedor */
     border-radius: 10px 10px 0 0;
     transition: all .5s;
 }
+
 
 .item figure {
     overflow: hidden;
